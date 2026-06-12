@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Breathe for Cancer — Downloads</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --g-900:#102624; --g-800:#1a3e3c; --g-700:#234c4a; --g-600:#2c605d;
+    --g-500:#357674; --g-400:#4a8f8b; --g-300:#74aeaa; --lime:#d2ea8d;
+    --ink:#14302e; --ink-soft:#3d5654; --muted:#6c8483; --bg:#eef4f3; --line:#d8e6e4;
+    --grad: linear-gradient(135deg,#102624 0%,#234c4a 44%,#357674 78%,#4a8f8b 100%);
+    --grad-soft: linear-gradient(135deg,#234c4a 0%,#357674 60%,#74aeaa 100%);
+    --display:"Bricolage Grotesque",system-ui,sans-serif; --sans:"Manrope",system-ui,sans-serif;
+  }
+  * { box-sizing:border-box; }
+  html,body { margin:0; padding:0; }
+  body { background:var(--bg); color:var(--ink); font-family:var(--sans); -webkit-font-smoothing:antialiased; min-height:100vh; }
+  h1,h2,h3 { font-family:var(--display); font-weight:700; margin:0; letter-spacing:-0.03em; line-height:1.0; }
+  p { margin:0; }
+  a { text-decoration:none; }
+  .wrap { max-width:940px; margin:0 auto; padding:0 24px; }
+  .eyebrow { font-family:var(--sans); font-weight:700; font-size:12px; letter-spacing:0.2em; text-transform:uppercase; }
+
+  /* hero */
+  .hero { background:var(--grad); color:#fff; position:relative; overflow:hidden; }
+  .hero::after { content:""; position:absolute; right:-160px; top:-180px; width:560px; height:560px; border-radius:50%; background:radial-gradient(circle, rgba(210,234,141,0.2), transparent 62%); }
+  .hero .wrap { position:relative; z-index:1; padding:64px 24px 56px; }
+  .hero .brand { display:flex; align-items:center; gap:12px; margin-bottom:34px; }
+  .hero .mark { width:38px; height:38px; border-radius:11px; background:#fff; display:flex; align-items:center; justify-content:center; box-shadow:0 10px 24px -12px rgba(0,0,0,0.4); }
+  .hero .bname { font-family:var(--display); font-weight:700; font-size:18px; color:#fff; }
+  .hero .bname span { color:var(--lime); }
+  .hero .eyebrow { color:var(--lime); }
+  .hero h1 { font-size:clamp(46px,8vw,84px); color:#fff; margin-top:14px; }
+  .hero h1 em { font-style:normal; color:var(--lime); }
+  .hero .sub { font-family:var(--display); font-weight:500; font-size:clamp(18px,2.4vw,24px); color:#eafef4; margin-top:16px; letter-spacing:-0.01em; }
+
+  /* list */
+  .list { padding:44px 0 24px; display:flex; flex-direction:column; gap:16px; }
+  .item {
+    background:#fff; border:1px solid var(--line); border-radius:22px;
+    padding:24px 26px; display:flex; align-items:center; gap:22px;
+    box-shadow:0 12px 30px -22px rgba(16,38,36,0.4);
+  }
+  @media (max-width:640px){ .item { flex-direction:column; align-items:flex-start; gap:16px; } }
+  .item .ic { width:54px; height:54px; flex:none; border-radius:15px; background:var(--grad-soft); display:flex; align-items:center; justify-content:center; box-shadow:0 10px 22px -12px rgba(23,128,80,0.5); }
+  .item .meta { flex:1; min-width:0; }
+  .item h3 { font-size:23px; color:var(--ink); }
+  .item .d { font-size:14px; color:var(--ink-soft); margin-top:5px; line-height:1.5; }
+  .item .fmt { display:inline-block; margin-top:9px; font-size:10.5px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--g-500); background:rgba(31,154,93,0.08); padding:5px 10px; border-radius:999px; }
+  .dl {
+    flex:none; display:inline-flex; align-items:center; gap:10px;
+    background:var(--grad-soft); color:#fff; font-weight:700; font-size:14.5px;
+    padding:14px 22px; border-radius:999px;
+    box-shadow:0 14px 30px -12px rgba(23,128,80,0.6);
+    transition:transform 150ms ease, box-shadow 150ms ease;
+  }
+  .dl:hover { transform:translateY(-2px); box-shadow:0 18px 38px -12px rgba(23,128,80,0.7); }
+  .dl svg { display:block; }
+  .dl.ghost { background:#fff; color:var(--g-700); border:1.5px solid var(--g-300); box-shadow:none; }
+  .item .actions { display:flex; gap:10px; flex-wrap:wrap; }
+
+  /* note + footer */
+  .note { background:rgba(31,154,93,0.06); border:1px solid var(--line); border-radius:18px; padding:20px 24px; margin-top:14px; font-size:14px; color:var(--ink-soft); line-height:1.6; }
+  .note b { color:var(--g-700); }
+  footer { padding:40px 0 56px; }
+  .foot { display:flex; align-items:center; justify-content:space-between; gap:18px; border-top:1px solid var(--line); padding-top:24px; flex-wrap:wrap; }
+  .foot .gf { display:inline-flex; color:var(--g-700); }
+  .foot .gf svg { height:22px; width:auto; display:block; }
+  .foot .gf svg path, .foot .gf svg polygon { fill:currentColor; }
+  .foot .c { font-size:12px; color:var(--muted); letter-spacing:0.04em; }
+</style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="wrap">
+      <div class="brand">
+        <span class="mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <defs><linearGradient id="lf" x1="4" y1="3" x2="20" y2="21" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#e0664f"/><stop offset="0.32" stop-color="#e58aa0"/><stop offset="0.58" stop-color="#d8b463"/><stop offset="0.8" stop-color="#7cc06a"/><stop offset="1" stop-color="#5aa6d6"/>
+            </linearGradient></defs>
+            <path d="M12 3 C 6 8, 6 16, 12 21 C 18 16, 18 8, 12 3 Z" fill="url(#lf)"/>
+            <path d="M12 6 V 20" stroke="rgba(255,255,255,0.75)" stroke-width="1.1"/>
+          </svg>
+        </span>
+        <span class="bname">Breathe for <span>Cancer</span></span>
+      </div>
+      <span class="eyebrow">Campagnemateriaal</span>
+      <h1>Downloads.</h1>
+      <p class="sub">Al het materiaal op één plek — klaar om te delen, af te drukken of te tonen.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="list">
+
+      <div class="item">
+        <span class="ic" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="16" height="18" rx="2" stroke="#fff" stroke-width="1.6"/><path d="M8 8h8M8 12h8M8 16h5" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        <div class="meta">
+          <h3>One-pager</h3>
+          <p class="d">De volledige campagnepagina met hero, oproep en partners.</p>
+          <span class="fmt">HTML · web</span>
+        </div>
+        <div class="actions">
+          <a class="dl" href="Breathe%20for%20Cancer.html" download="Breathe for Cancer.html">Download
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 2v8m0 0l-3.2-3.2M8 10l3.2-3.2M3 13.5h10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="dl ghost" href="Breathe%20for%20Cancer.html" target="_blank" rel="noopener">Open</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <span class="ic" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="#fff" stroke-width="1.6"/><path d="M10 9.5l5 2.5-5 2.5z" fill="#fff"/></svg></span>
+        <div class="meta">
+          <h3>Oproepfilm</h3>
+          <p class="d">30s film — de tekening op volledig scherm met bewegend groen verloop.</p>
+          <span class="fmt">HTML · video</span>
+        </div>
+        <div class="actions">
+          <a class="dl" href="video/Oproep.html" download="Breathe for Cancer - Oproepfilm.html">Download
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 2v8m0 0l-3.2-3.2M8 10l3.2-3.2M3 13.5h10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="dl ghost" href="video/Oproep.html" target="_blank" rel="noopener">Afspelen</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <span class="ic" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M6 3h8l4 4v14H6z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 3v4h4M9 13h6M9 16h6" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div class="meta">
+          <h3>Partnerdossier</h3>
+          <p class="d">Professioneel dossier (6 pagina's A4) om aan een bedrijf te geven.</p>
+          <span class="fmt">HTML · A4 · print → PDF</span>
+        </div>
+        <div class="actions">
+          <a class="dl" href="Breathe%20for%20Cancer%20-%20Dossier.html#dl" target="_blank" rel="noopener">Download (beeld)
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 2v8m0 0l-3.2-3.2M8 10l3.2-3.2M3 13.5h10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="dl ghost" href="Breathe%20for%20Cancer%20-%20Dossier.html" target="_blank" rel="noopener">Open</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <span class="ic" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="5" y="3" width="14" height="18" rx="2" stroke="#fff" stroke-width="1.6"/><path d="M9 8h6M9 11h6" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        <div class="meta">
+          <h3>Posters — 3 voorstellen</h3>
+          <p class="d">A3, tekening als achtergrond met groen verloop. Schaalt naar A2 bij afdruk.</p>
+          <span class="fmt">HTML · A3 · print → PDF</span>
+        </div>
+        <div class="actions">
+          <a class="dl" href="Breathe%20for%20Cancer%20-%20Poster.html#dl" target="_blank" rel="noopener">Download (beeld)
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 2v8m0 0l-3.2-3.2M8 10l3.2-3.2M3 13.5h10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="dl ghost" href="Breathe%20for%20Cancer%20-%20Poster.html" target="_blank" rel="noopener">Open</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <span class="ic" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="2" stroke="#fff" stroke-width="1.6"/><path d="M3 8l9 5 9-5" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+        <div class="meta">
+          <h3>Uitnodigingen — 3 voorstellen</h3>
+          <p class="d">A6 dubbelzijdig (voor- en achterkant), met QR onder de tekst.</p>
+          <span class="fmt">HTML · A6 · print → PDF</span>
+        </div>
+        <div class="actions">
+          <a class="dl" href="Breathe%20for%20Cancer%20-%20Uitnodiging.html#dl" target="_blank" rel="noopener">Download (beeld)
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 2v8m0 0l-3.2-3.2M8 10l3.2-3.2M3 13.5h10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="dl ghost" href="Breathe%20for%20Cancer%20-%20Uitnodiging.html" target="_blank" rel="noopener">Open</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="note">
+      <b>PDF maken?</b> Open een poster, kaart of het dossier en kies <b>Bestand → Afdrukken → Bewaren als PDF</b>. De maten staan al ingesteld (dossier A4, poster A3, kaarten A6). Voor de uitnodigingen kies je <b>dubbelzijdig</b> zodat elke achterkant achter de juiste voorkant komt.
+    </div>
+
+    <footer>
+      <div class="foot">
+        <span class="gf"><svg viewBox="0 0 800 357.53" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Go Forest"><path d="M91.66,318.72c-6.52,5-14.24,7.54-22.96,7.54-21.84,0-37.69-15.61-37.69-37.12s15.69-37.56,37.34-37.56c9.06-.26,16.99,2.59,25.81,8.76l3.67,2.57v-12.64l-1.03-.69c-10.56-7.08-21.11-8.57-28.1-8.57-27.65,0-48.51,20.64-48.51,48s20.69,47.82,48.13,47.82c13.07,0,24.54-4.33,33.19-12.53l.73-.69v-37.05h-10.57v32.16Z"/><path d="M174.24,240.89c-25.57,0-46.37,21.53-46.37,48s20.8,48.13,46.37,48.13,46.37-21.59,46.37-48.13-20.8-48-46.37-48ZM174.24,326.45c-19.53,0-35.42-16.85-35.42-37.56s15.89-37.43,35.42-37.43,35.42,16.79,35.42,37.43-15.89,37.56-35.42,37.56Z"/><polygon points="248.51 335.26 259.08 335.26 259.08 295.37 301.98 295.37 301.98 285.18 259.08 285.18 259.08 252.84 310.79 252.84 310.79 242.53 248.51 242.53 248.51 335.26"/><path d="M405.87,235.78c48.69-10.87,85.2-54.4,85.2-106.32,0-60.08-48.88-108.96-108.96-108.96s-108.96,48.88-108.96,108.96c0,51.59,36.06,94.89,84.29,106.11-13.36,8.43-22.32,23.62-22.32,40.97,0,26.54,20.8,48.13,46.37,48.13s46.37-21.59,46.37-48.13c0-17.2-8.82-32.28-21.99-40.75ZM386.79,31.93c34.6,1.65,64.54,21.28,80.58,49.82l-80.58,54.91V31.93ZM386.79,150.17l85.56-58.3c4.84,11.58,7.54,24.27,7.54,37.59,0,52.34-41.36,95.07-93.1,97.54v-76.83ZM375.61,32.02v63.9l-46.96-48.21c13.67-8.97,29.71-14.54,46.96-15.68ZM319.57,54.4l56.04,57.54v53.49l-82.93-75.31c6.14-13.89,15.38-26.11,26.89-35.72ZM284.34,129.46c0-9.75,1.48-19.15,4.15-28.04l87.12,79.11v46.38c-50.88-3.37-91.27-45.73-91.27-97.44ZM381.49,314.09c-19.53,0-35.42-16.85-35.42-37.56s15.89-37.43,35.42-37.43,35.42,16.79,35.42,37.43-15.89,37.56-35.42,37.56Z"/><path d="M520.18,269.01c0-15.84-13.02-26.49-32.4-26.49h-32.03v92.74h10.57v-37.88h18.6l24.22,37.88h13.24l-25.43-39.23c14.04-2.99,23.22-13.49,23.22-27.02ZM466.33,287.07v-34.35h21.2c6.6,0,21.96,1.6,21.96,16.42,0,13.22-11.54,17.93-22.33,17.93h-20.82Z"/><polygon points="559.35 292.86 601.75 292.86 601.75 282.54 559.35 282.54 559.35 252.84 610.18 252.84 610.18 242.53 548.78 242.53 548.78 335.26 612.07 335.26 612.07 324.94 559.35 324.94 559.35 292.86"/><path d="M667.02,283.55c-11.17-4.47-20.81-8.34-20.81-17.56,0-10.04,9.16-14.53,18.24-14.53,7.61,0,14.24,2.81,22.89,9.69l3.78,3v-13.32l-.89-.7c-7.48-5.88-16.26-8.87-26.1-8.87-16.78,0-28.5,10.32-28.5,25.11,0,16.52,14.74,22.39,27.74,27.57,10.98,4.37,20.46,8.14,20.46,16.97s-8.3,15.29-20.22,15.29c-10.39-.02-20.89-4.65-25.86-11.89l-4.25-6.18v16.86l.56.65c5.77,6.77,17.29,11.14,29.33,11.14,18.34,0,31.14-10.63,31.14-25.86,0-16.34-14.61-22.19-27.51-27.36Z"/><polygon points="707.96 242.53 707.96 252.84 738.66 252.84 738.66 335.26 749.23 335.26 749.23 252.84 779.81 252.84 779.81 242.53 707.96 242.53"/></svg></span>
+        <span class="c">© Breathe for Cancer · 2026 · in partnerschap met Go Forest &amp; CRIG</span>
+      </div>
+    </footer>
+  </main>
+
+</body>
+</html>
